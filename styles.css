@@ -1,0 +1,42 @@
+body {
+    background: #FFF9F5; /* Light background - same as index.html */
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+.container {
+    flex: 1; /* Allow the container to grow and fill available space */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn-pink {
+    background-color: #E86975; /* Main button color */
+    color: white;
+}
+
+.btn-danger {
+    background-color: #FD9898; /* Danger button color */
+    color: white;
+    height: 60px; /* Set a fixed height for the No button */
+}
+
+.text-danger {
+    color: #EFAAB0; /* Text color */
+}
+
+.display-4 {
+    font-size: 2.5rem; /* Adjust font size for display */
+    font-weight: bold; /* Make the font bolder */
+}
+
+.text-center {
+    text-align: center; /* Center the text */
+}

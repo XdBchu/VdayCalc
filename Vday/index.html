@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="tabcon.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hey Calc</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-weight: bold; /* Make the font bolder */
+            background-color: #FFF9F5; /* Light background */
+        }
+        .btn-pink {
+            background-color: #E86975; /* Main button color */
+            color: white;
+        }
+        .btn-danger {
+            background-color: #FD9898; /* Danger button color */
+            color: white;
+        }
+        .text-danger {
+            color: #EFAAB0; /* Text color */
+        }
+        .scaled-image {
+            width: 300px; /* Set desired width */
+            height: auto; /* Maintain aspect ratio */
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <div class="container text-center mt-5">
+        <h1 class="display-4 text-danger">Calc, will you be my valentine?</h1>
+        <div class="button-container mt-4">
+            <button id="yesButton" class="btn btn-pink btn-lg">Yes cuz Brandon is cool</button>
+            <button id="noButton" class="btn btn-danger btn-lg">No</button>
+        </div>
+        <img id="valentineImage" src="imgs/c0.png" alt="Valentine Image" class="img-fluid scaled-image">
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        let count = 0; // Initialize attempt counter
+        const images = [
+            'imgs/c0.png', 
+            'imgs/c1.png', // Original image
+            'imgs/c2.png', // Second image (replace with actual path)
+            'imgs/c3.png',
+
+            //
+            'imgs/c4.png', // Original image
+            'imgs/c5.png', // Second image (replace with actual path)
+            'imgs/c6.png',
+            'imgs/c7.png', // Original image
+            'imgs/c8.png', // Second image (replace with actual path)
+            'imgs/c9.png',
+              // Third image (replace with actual path)
+        ];
+
+        document.getElementById('noButton').addEventListener('click', function() {
+            console.log("heh")
+            const valentineImage = document.getElementById('valentineImage');
+            count++; // Increment attempt counter
+            // Change the image based on the attempt number
+            if (attempt < images.length) {
+                valentineImage.src = images[count]; // Update image source
+            } else {
+                attempt = 0; // Reset attempt counter if it exceeds the array length
+                valentineImage.src = images[count]; // Reset to the first image
+            }
+        });
+    </script>
+</body>
+</html>

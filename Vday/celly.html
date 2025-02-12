@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="tabcon.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bchu + Calc</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+    <style>
+        body {
+            font-weight: bold; /* Make the font bolder */
+            background-color: #FFF9F5; /* Light background */
+        }
+        .tab-icon {
+            position: absolute; /* Position the image absolutely */
+            top: 20px; /* Distance from the top */
+            left: 50%; /* Center horizontally */
+            transform: translateX(-50%); /* Center the image */
+            width: 300px; /* Set desired width for the icon */
+            height: auto; /* Maintain aspect ratio */
+            z-index: 1; /* Place above the heart */
+        }
+        
+        .btn-pink {
+            background-color: #E86975; /* Main button color */
+            color: white;
+        }
+        .btn-danger {
+            background-color: #FD9898; /* Danger button color */
+            color: white;
+        }
+        .text-danger {
+            font-weight: bold;
+            color: #EFAAB0; /* Text color */
+        }
+        .header-container {
+            display: flex;
+            align-items: center; /* Center items vertically */
+            justify-content: space-between; /* Space items evenly */
+            width: 100%; /* Full width to allow spacing */
+        }
+        .header-image {
+            width: 80px; /* Set desired width for images */
+            height: auto; /* Maintain aspect ratio */
+            margin: 0 10px; /* Add some margin between images and header */
+        }
+        .flipped-image {
+            transform: scaleX(-1); /* Flip the image horizontally */
+        }
+        .sliding-image {
+            position: absolute; /* Position the image absolutely */
+            top: 20%; /* Adjust top position as needed */
+            left: -100px; /* Start off-screen to the left */
+            animation: slideIn 3s forwards; /* Animation for sliding */
+            width: 100px;
+            height: auto;
+        }
+        @keyframes slideIn {
+            to {
+                left: 100%; /* End position off-screen to the right */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container d-flex flex-column justify-content-center align-items-center vh-100">
+        <div class="header-container">
+            <img src="imgs/c6.png" alt="Left Image" class="header-image"> <!-- Left Image -->
+            <h1 class="display-4 text-danger">🎉 Niceee 😎 🎉</h1>
+            <img src="imgs/c6.png" alt="Right Image" class="header-image flipped-image"> <!-- Right Image -->
+        </div>
+        <!-- Multiple Sliding Images -->
+        <img src="imgs/c8.png" alt="Sliding Image 1" class="sliding-image" style="animation-delay: 0s;"> <!-- Sliding Image 1 -->
+        <img src="imgs/c8.png" alt="Sliding Image 2" class="sliding-image" style="animation-delay: 0s;"> <!-- Sliding Image 2 -->
+        <img src="imgs/c8.png" alt="Sliding Image 3" class="sliding-image" style="animation-delay: 0s;"> <!-- Sliding Image 3 -->
+        <img src="imgs/c8.png" alt="Sliding Image 4" class="sliding-image" style="animation-delay: 0s;"> <!-- Sliding Image 4 -->
+        <img src="imgs/c8.png" alt="Sliding Image 5" class="sliding-image" style="animation-delay: 0s;"> <!-- Sliding Image 5 -->
+        <img src="imgs/c8.png" alt="Sliding Image 1" class="sliding-image" style="animation-delay: 0s;"> <!-- Sliding Image 1 -->
+        <img src="imgs/c8.png" alt="Sliding Image 2" class="sliding-image" style="animation-delay: 0s;"> <!-- Sliding Image 2 -->
+        <img src="imgs/c8.png" alt="Sliding Image 3" class="sliding-image" style="animation-delay: 0s;"> <!-- Sliding Image 3 -->
+        <img src="imgs/c8.png" alt="Sliding Image 4" class="sliding-image" style="animation-delay: 0s;"> <!-- Sliding Image 4 -->
+        <img src="imgs/c8.png" alt="Sliding Image 5" class="sliding-image" style="animation-delay: 0s;"> <!-- Sliding Image 5 -->
+        <img src="imgs/c8.png" alt="Sliding Image 1" class="sliding-image" style="animation-delay: 0s;"> <!-- Sliding Image 1 -->
+        <img src="imgs/c8.png" alt="Sliding Image 2" class="sliding-image" style="animation-delay: 0s;"> <!-- Sliding Image 2 -->
+        <img src="imgs/c8.png" alt="Sliding Image 3" class="sliding-image" style="animation-delay: 0s;"> <!-- Sliding Image 3 -->
+        <img src="imgs/c8.png" alt="Sliding Image 4" class="sliding-image" style="animation-delay: 0s;"> <!-- Sliding Image 4 -->
+        <img src="imgs/c8.png" alt="Sliding Image 5" class="sliding-image" style="animation-delay: 0s;"> <!-- Sliding Image 5 -->
+        <img src="imgs/c8.png" alt="Sliding Image 1" class="sliding-image" style="animation-delay: 0s;"> <!-- Sliding Image 1 -->
+        <img src="imgs/c8.png" alt="Sliding Image 2" class="sliding-image" style="animation-delay: 0s;"> <!-- Sliding Image 2 -->
+        <img src="imgs/c8.png" alt="Sliding Image 3" class="sliding-image" style="animation-delay: 0s;"> <!-- Sliding Image 3 -->
+        <img src="imgs/c8.png" alt="Sliding Image 4" class="sliding-image" style="animation-delay: 0s;"> <!-- Sliding Image 4 -->
+        <img src="imgs/c8.png" alt="Sliding Image 5" class="sliding-image" style="animation-delay: 0s;"> <!-- Sliding Image 5 -->
+        <img src="tabcon.png" alt="Tab Icon" class="tab-icon"> <!-- Tab Icon Image -->
+        <p class="text-center">happy valentines day cuzz</p>
+    </div>
+    <script>
+        window.onload = function() {
+            // Trigger multiple bursts of confetti when the page loads
+            for (let i = 0; i < 20; i++) { // Increase the number of bursts
+                setTimeout(() => {
+                    confetti({
+                        spread: 200, // Adjust spread for wider dispersion
+                        particleCount: 100, // Increase the number of particles
+                        origin: { x: Math.random(), y: 0 } // Randomize the x origin for full width
+                    });
+                }, i * 200); // Delay between bursts
+            }
+
+            // Set random speeds and positions for sliding images
+            const slidingImages = document.querySelectorAll('.sliding-image');
+            slidingImages.forEach(image => {
+                const randomDuration = Math.random() * (10 - 1) + 2; // Random duration between 2s and 5s
+                image.style.animationDuration = `${randomDuration}s`;
+
+                // Set a random top position between 0% and 80% of the viewport height
+                const randomY = Math.random() * 100; // Random value between 0 and 80
+                image.style.top = `${randomY}vh`; // Set the top position in viewport height units
+            });
+        };
+    </script>
+</body>
+</html>
